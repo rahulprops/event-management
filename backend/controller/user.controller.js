@@ -2,7 +2,7 @@ import validator from 'validator'
 import User from '../models/user.model.js';
 import bcrypt from 'bcrypt'
 // register user
-const register= async (req,res)=>{
+ export const register= async (req,res)=>{
     const {name,email,password}=req.body;
     if(!name || !email || !password){
         return res.status(400).json({message:"all feilds requred"})
